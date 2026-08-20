@@ -1,0 +1,37 @@
+<div class="cupom-container">
+  <div class="cupom-header">
+    <mat-icon class="logo-icon">receipt</mat-icon>
+    <h2>Sistema Korp - Módulo & Estoque</h2>
+    <p>NOTA FISCAL - {{ data.notaId }}</p>
+    <div class="linha-tracejada"></div>
+  </div>
+
+  <div class="cupom-body">
+    <div class="item-row destaque">
+      <span class="col-prod">PRODUTO</span>
+      <span class="col-qtd">QTD</span>
+    </div>
+    
+    <!-- Linha exibindo Nome e Código completo no cupom impresso -->
+    <div class="item-row" *ngFor="let item of data.itens">
+      <span class="col-prod">
+        {{ item.produto?.descricao || item.produto?.Descricao || 'Produto' }} - Código: {{ item.produto?.id || item.produto?.Id }}
+      </span>
+      <span class="col-qtd">{{ item.quantidade }}x</span>
+    </div>
+    
+    <div *ngIf="!data.itens || data.itens.length === 0" style="text-align: center; font-size: 12px; color: #757575; padding: 10px 0;">
+      (Sem itens listados)
+    </div>
+
+    <div class="linha-tracejada"></div>
+  </div>
+
+  <div class="cupom-footer">
+    <p>Obrigado pela preferência!</p>
+  </div>
+</div>
+
+<div mat-dialog-actions class="acoes-container">
+  <button mat-flat-button class="btn-roxo" (click)="fechar()">Fechar Recibo</button>
+</div>

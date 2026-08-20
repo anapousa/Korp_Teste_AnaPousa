@@ -1,0 +1,50 @@
+<mat-card class="card-container">
+  
+  <div class="card-header">
+    <div class="icon-box">
+      <mat-icon>inventory_2</mat-icon>
+    </div>
+    <div class="title-box">
+      <h2>Cadastro de Produto</h2>
+      <p>Adicione um novo produto ao seu estoque.</p>
+    </div>
+  </div>
+
+  <div class="form-row">
+    
+    <div class="field-wrapper">
+      <label class="custom-label">Nome do Produto</label>
+      <mat-form-field appearance="outline" class="full-width" subscriptSizing="dynamic">
+        <mat-icon matPrefix>shopping_bag</mat-icon>
+        <input matInput [(ngModel)]="produto.descricao" placeholder="Ex: Teclado Mecânico">
+      </mat-form-field>
+    </div>
+
+    <div class="field-wrapper">
+      <label class="custom-label">Quantidade em Estoque</label>
+      <mat-form-field appearance="outline" class="full-width" subscriptSizing="dynamic">
+        <mat-icon matPrefix>format_list_numbered</mat-icon>
+        <input matInput type="number" [(ngModel)]="produto.saldo">
+      </mat-form-field>
+    </div>
+
+  </div>
+
+  <div class="card-actions" style="margin-top: 24px; display: flex; gap: 16px;">
+    
+    <!-- Botão de Consulta de Produto -->
+    <button mat-stroked-button class="btn-outline" (click)="abrirConsultaProduto()">
+      <mat-icon>search</mat-icon> Consultar Produto
+    </button>
+
+    <button mat-stroked-button class="btn-outline" (click)="abrirLista()">
+      <mat-icon>list</mat-icon> Ver Todos os Produtos
+    </button>
+
+    <button mat-flat-button class="btn-roxo" (click)="salvar()">
+      <mat-icon>add</mat-icon> Salvar Produto
+    </button>
+    
+  </div>
+
+</mat-card>

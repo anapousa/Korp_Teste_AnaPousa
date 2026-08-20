@@ -1,0 +1,143 @@
+.card-container {
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  border: 1px solid #eaeaea;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  background-color: #f4efff;
+  color: #5e35b1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-box h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.title-box p {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: #757575;
+}
+
+.nota-highlight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f4efff;
+  padding: 16px 20px;
+  border-radius: 8px;
+  color: #5e35b1;
+  margin-bottom: 24px;
+}
+
+.nota-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.nota-label {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.nota-numero {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.align-bottom {
+  align-items: flex-end; 
+}
+
+.field-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-produto {
+  flex: 2; 
+}
+
+.input-quantidade {
+  flex: 1; 
+}
+
+.custom-label {
+  font-size: 13px;
+  font-weight: 400; 
+  color: #424242;
+  margin-bottom: 6px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+::ng-deep .mdc-text-field--outlined {
+  height: 44px !important;
+}
+::ng-deep .mat-mdc-form-field-infix {
+  min-height: 44px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.btn-roxo {
+  background-color: #5e35b1 !important;
+  color: white !important;
+  height: 44px !important;
+  padding: 0 24px !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.btn-adicionar {
+  height: 44px !important; 
+  margin-bottom: 0 !important; 
+}
+
+.btn-outline {
+  border: 1px solid #d1d5db !important;
+  color: #374151 !important;
+  height: 44px !important;
+  padding: 0 20px !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}

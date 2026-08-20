@@ -1,0 +1,17 @@
+/* Personalizando o fundo da mensagem flutuante (SnackBar) */
+.mdc-snackbar__surface {
+  background-color: #5e35b1 !important; /* O roxo da sua marca */
+  border-radius: 8px !important;
+}
+
+/* Personalizando o texto principal ("Produto adicionado...") */
+.mdc-snackbar__label {
+  color: #ffffff !important; 
+  font-family: 'Roboto', sans-serif !important; 
+  font-size: 15px !important;
+}
+
+/* Personalizando a cor do botão ("Fechar") */
+.mat-mdc-snack-bar-action {
+  color: #d1c4e9 !important; /* Um lilás claro para destacar no fundo roxo escuro */
+}

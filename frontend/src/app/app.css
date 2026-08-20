@@ -1,0 +1,74 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.top-nav {
+  background-color: #ffffff;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  border-top: 4px solid #5e35b1;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  color: #5e35b1;
+  font-size: 28px;
+  width: 28px;
+  height: 28px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.page-background {
+  min-height: calc(100vh - 64px); 
+  background-color: #f8f9fa; 
+  padding: 40px 32px; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Largura ajustada para o modo vertical não ficar gigante */
+.main-content {
+  max-width: 900px; 
+  width: 100%;
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: column;
+  flex: 1; 
+}
+
+/* Volta a empilhar as caixas de cima para baixo */
+.components-wrapper {
+  display: flex;
+  flex-direction: column; 
+  gap: 32px; 
+}
+
+.footer {
+  text-align: center;
+  margin-top: auto; 
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.footer p {
+  color: #9e9e9e;
+  font-size: 13px;
+  margin: 0;
+}

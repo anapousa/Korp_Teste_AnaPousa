@@ -1,0 +1,93 @@
+.card-container {
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+  border: 1px solid #eaeaea;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  background-color: #f4efff;
+  color: #5e35b1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-box h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.title-box p {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: #757575;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.field-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-label {
+  font-size: 13px;
+  font-weight: 400; 
+  color: #424242;
+  margin-bottom: 6px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+::ng-deep .mdc-text-field--outlined {
+  height: 44px !important;
+}
+::ng-deep .mat-mdc-form-field-infix {
+  min-height: 44px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.btn-roxo {
+  background-color: #5e35b1 !important;
+  color: white !important;
+  height: 44px !important; 
+  padding: 0 24px !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.btn-outline {
+  border: 1px solid #d1d5db !important;
+  color: #374151 !important;
+  height: 44px !important;
+  padding: 0 20px !important;
+  border-radius: 6px !important;
+  font-weight: 500 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: transparent !important;
+}

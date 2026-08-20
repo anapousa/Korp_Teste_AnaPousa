@@ -1,0 +1,71 @@
+<mat-card class="card-container">
+  
+  <div class="card-header space-between">
+    <div class="header-left">
+      <div class="icon-box">
+        <mat-icon>receipt_long</mat-icon>
+      </div>
+      <div class="title-box">
+        <h2>Faturamento de Notas</h2>
+        <p>Gerencie suas notas fiscais de forma prática.</p>
+      </div>
+    </div>
+    
+    <div style="display: flex; gap: 16px;">
+      <button mat-stroked-button class="btn-outline" (click)="abrirConsulta()">
+        <mat-icon>search</mat-icon> Consultar Nota
+      </button>
+
+      <button mat-flat-button class="btn-roxo" (click)="criarNota()">
+        <mat-icon>add</mat-icon> Abrir Nova Nota
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="notaId" class="nota-ativa-container">
+    
+    <div class="nota-highlight">
+      <mat-icon>receipt</mat-icon>
+      <div class="nota-info">
+        <span class="nota-label">Nota Atual</span>
+        <span class="nota-numero">{{ notaId }}</span>
+      </div>
+    </div>
+
+    <div class="form-row align-bottom">
+      <div class="field-wrapper select-produto">
+        <label class="custom-label">Escolha o Produto</label>
+        <mat-form-field appearance="outline" class="full-width" subscriptSizing="dynamic">
+          <mat-icon matPrefix>inventory_2</mat-icon>
+          <mat-select [(ngModel)]="produtoSelecionado" placeholder="Selecione um produto...">
+            <!-- Opção exibindo Nome e Código completo -->
+            <mat-option *ngFor="let p of produtos" [value]="p">
+              {{ p.descricao || p.Descricao }} - Código: {{ p.id || p.Id }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="field-wrapper input-quantidade">
+        <label class="custom-label">Quantidade</label>
+        <mat-form-field appearance="outline" class="full-width" subscriptSizing="dynamic">
+          <input matInput type="number" [(ngModel)]="quantidade">
+        </mat-form-field>
+      </div>
+
+      <button mat-flat-button class="btn-roxo btn-adicionar" (click)="adicionarProduto()">
+        <mat-icon>add</mat-icon> Adicionar à Nota
+      </button>
+    </div>
+
+  </div>
+
+  <div class="card-actions" style="margin-top: 32px;">
+    <button mat-stroked-button class="btn-outline" (click)="imprimirNota()" [disabled]="carregandoImpressao">
+      <mat-icon *ngIf="!carregandoImpressao">print</mat-icon>
+      <mat-icon *ngIf="carregandoImpressao">hourglass_empty</mat-icon>
+      {{ carregandoImpressao ? 'Imprimindo... ⏳' : 'Imprimir Nota' }}
+    </button>
+  </div>
+
+</mat-card>

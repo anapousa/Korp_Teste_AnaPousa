@@ -1,0 +1,11 @@
+# Bloqueios do C# (.NET)
+[Bb]in/
+[Oo]bj/
+
+# Bloqueios do Angular
+node_modules/
+dist/
+.angular/
+
+# Arquivos de ambiente
+.env

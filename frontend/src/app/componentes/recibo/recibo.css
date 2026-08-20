@@ -1,0 +1,71 @@
+/* Fundo imitando papel térmico */
+.cupom-container {
+  background-color: #fdfae6;
+  color: #1a1a1a;
+  font-family: 'Courier New', Courier, monospace; /* Fonte clássica de recibo */
+  padding: 30px;
+}
+
+.cupom-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-icon {
+  font-size: 36px;
+  width: 36px;
+  height: 36px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.cupom-header h2 { margin: 0; font-size: 18px; font-weight: 900; }
+.cupom-header p { margin: 5px 0 0 0; font-size: 14px; font-weight: bold; }
+
+.linha-tracejada {
+  border-bottom: 1.5px dashed #1a1a1a;
+  margin: 15px 0;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.destaque { font-weight: bold; margin-bottom: 15px; }
+
+.col-prod { flex: 2; text-align: left; }
+.col-qtd { flex: 1; text-align: center; }
+.col-total { flex: 1; text-align: right; }
+
+.cupom-footer { margin-top: 20px; text-align: center; }
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.cupom-footer p { font-size: 12px; margin: 0; }
+
+.acoes-container {
+  background-color: #fdfae6;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+/* O botão roxo padronizado com os outros */
+.btn-roxo {
+  background-color: #5e35b1 !important;
+  color: white !important;
+  height: 44px !important;
+  border-radius: 6px !important;
+  padding: 0 30px !important;
+  font-family: 'Roboto', sans-serif !important;
+}
