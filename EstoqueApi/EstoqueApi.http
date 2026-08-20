@@ -1,0 +1,7 @@
+POST http://localhost:5195/produtos
+Content-Type: application/json
+
+{
+  "descricao": "Lápis",
+  "saldo": 50
+}
