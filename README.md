@@ -36,9 +36,9 @@ Certifique-se de ter o **Docker**, o **.NET 8 SDK** e o **Node.js / Angular CLI*
 **1. Banco de Dados**
 O sistema utiliza o PostgreSQL. Use os comandos abaixo para subir as instâncias:
 ```bash
-docker run --name estoque-db -e POSTGRES_PASSWORD=suasenha -p 5432:5432 -d postgres
+docker run --name estoque-db -e POSTGRES_USER=user -e POSTGRES_PASSWORD=suasenha -p 5432:5432 -d postgres
 
-docker run --name faturamento-db -e POSTGRES_PASSWORD=suasenha -p 5433:5432 -d postgres
+docker run --name faturamento-db -e POSTGRES_USER=user -e POSTGRES_PASSWORD=suasenha -p 5433:5432 -d postgres
 ```
 
 *Atenção: Verifique os arquivos `appsettings.json` nas pastas `EstoqueApi` e `FaturamentoApi` para garantir que a Connection String aponta para a senha configurada no seu Docker.*
