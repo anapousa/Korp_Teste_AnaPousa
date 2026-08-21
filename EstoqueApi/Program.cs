@@ -55,7 +55,6 @@ app.MapPut("/produtos/{id}", async (int id, int quantidade, EstoqueDbContext db)
         return Results.BadRequest(new { detail = "Estoque insuficiente ou o produto acabou de ser utilizado por outra nota." });
     }
 
-    // 3. Retorna o produto atualizado para não quebrar a compatibilidade com o seu frontend
     var produtoAtualizado = await db.Produtos.FindAsync(id);
     return Results.Ok(produtoAtualizado);
 });

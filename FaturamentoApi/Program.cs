@@ -99,13 +99,9 @@ app.MapGet("/notas/{id}", async (int id, FaturamentoDbContext db) =>
         return Results.NotFound(new { detail = "Nota não encontrada." });
     }
 
-    // 2. Busca os itens que pertencem a essa nota usando LINQ (Where)
-    // OBS: Substitua "ItensNotaFiscal" pelo nome exato do seu DbSet no DbContext
     var itensDaNota = await db.ItensNotaFiscal
                               .Where(item => item.NotaFiscalId == id)
                               .ToListAsync();
-
-    // 3. Monta o retorno no exato formato que o nosso Angular espera
     return Results.Ok(new
     {
         id = nota.Id,
@@ -116,7 +112,6 @@ app.MapGet("/notas/{id}", async (int id, FaturamentoDbContext db) =>
             produto = new
             {
                 id = i.ProdutoId,
-                // Como o nome oficial está no Estoque, enviamos uma descrição padrão
                 descricao = "Produto Cód. " + i.ProdutoId 
             }
         })

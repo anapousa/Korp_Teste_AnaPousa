@@ -2,7 +2,8 @@
   <div class="cupom-header">
     <mat-icon class="logo-icon">receipt</mat-icon>
     <h2>Sistema Korp - Módulo & Estoque</h2>
-    <p>NOTA FISCAL - {{ data.notaId }}</p>
+    <p>NOTA FISCAL -  
+      {{ data.notaId }}</p>
     <div class="linha-tracejada"></div>
   </div>
 
@@ -12,7 +13,6 @@
       <span class="col-qtd">QTD</span>
     </div>
     
-    <!-- Linha exibindo Nome e Código completo no cupom impresso -->
     <div class="item-row" *ngFor="let item of data.itens">
       <span class="col-prod">
         {{ item.produto?.descricao || item.produto?.Descricao || 'Produto' }} - Código: {{ item.produto?.id || item.produto?.Id }}
